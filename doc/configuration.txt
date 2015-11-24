@@ -1,0 +1,58 @@
+                                 
+				 DANBI Configurations
+				 ====================
+
+1. How to configure
+  cmake -DDANBI_CONF="-DDANBI_DISABLE_SPECULATIVE_SCHEDULING" . 
+
+2. Configuration parameters
+  * Schduling
+    o DANBI_DISABLE_SPECULATIVE_SCHEDULING
+      - disable probabilistic speculative scheduling
+    o DANBI_DISABLE_RANDOM_SCHEDULING 
+      - disable probacilistic random scheduling
+    o DANBI_ENABLE_RANDOM_JUMP_FOR_VISITED_KERNEL
+      - enable random jump for visited kernel 
+    o DANBI_ENABLE_EAGER_THREAD_DESTROY
+      - enble eager thread destroy
+  
+  * Logging
+    o DANBI_ENABLE_EVENT_LOGGER 
+      - enable event logger
+    o DANBI_EVENT_LOGGER_DISABLE_QUEUE_EVENT
+      - disable logging queue event
+    o DANBI_EVENT_LOGGER_DISABLE_THREAD_LIFECYCLE
+      - disable logging thread lifecycle
+  
+  * Static Optimization
+    o DANBI_DISABLE_MULTIPLE_ITER_OPTIMIZATION
+      - disable multiple iteration optimization
+
+  * Ticketing
+    o DANBI_DO_NOT_TICKET
+      - ignore ticketing
+  
+  * Data FIFO Queue
+    o DANBI_USE_RESIZABLE_BUFFER_MANAGER_BY_DEFAULT
+      - change default buffer manager from null buff manager to resizable buffer manager
+    o DANBI_DISABLE_BLOCKING_RESERVE_COMMIT_QUEUE
+      - disable blocking RCQ and use concurrent RCQ
+    o DANBI_DISABLE_PER_CPU_ORDERING_TICKET_SERVER
+      - enable single ordering ticket server
+    o DANBI_DISABLE_QUEUE_BASED_COMMIT_ORDERING  
+      - disable queue based commit ordering
+
+  * Ready Queue 
+    o DANBI_ENABLE_BACKOFF_DELAY
+      - enable backoff delay for MSQueue and LSQueue
+    o DNABI_READY_QUEUE_USE_MSQ
+      - use MSQ as a ready queue
+    o DNABI_READY_QUEUE_USE_LSQ
+      - use LSQ as a ready queue
+
+  * NUMA
+    o DANBI_DO_NOT_USE_NUMA_INTERLEAVE_MEM_POLICY
+      - do not use interleaving memory policy on NUMA architecture
+    o DANBI_DO_NOT_PREVENT_CONCURRENT_PAGE_FAULTS
+      - do not prevent concurrent page faults
+
