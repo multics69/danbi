@@ -6,7 +6,7 @@ The stream programming model has received much interest because it naturally exp
 
 Author
 -------
-- Changwoo Min <changwoo@gatech.edu>
+- Changwoo Min <changwoo@vt.edu>
 
 
 Publications
